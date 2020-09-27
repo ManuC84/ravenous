@@ -18,6 +18,8 @@ const Yelp = {
                             category: business.categories[0].title,
                             rating: business.rating,
                             reviewCount: business.reviewCount,
+                            coordinates: business.coordinates,
+                            url: business.url
                         }
 
                     })
