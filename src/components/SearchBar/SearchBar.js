@@ -1,6 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
-
+import Autocomplete from '../SearchBar/autocomplete'
 
 
 class SearchBar extends React.Component {
@@ -68,6 +68,7 @@ class SearchBar extends React.Component {
         })
     }
 
+
     render() {
         return (
             <div className="SearchBar">
@@ -78,7 +79,8 @@ class SearchBar extends React.Component {
                 </div>
                 <div className="SearchBar-fields">
                     <input onKeyUp={this.handleClick.bind(this)} onChange={this.handleTermsChange} placeholder="Search Businesses" />
-                    <input onKeyUp={this.handleClick.bind(this)} onChange={this.handleLocationChange} placeholder="Where?" />
+                    {/* {<input onKeyUp={this.handleClick.bind(this)} onChange={this.handleLocationChange} placeholder="Where?" />} */}
+                    <Autocomplete />
                 </div>
                 <div className="SearchBar-submit">
                     <a onClick={this.handleSearch}>Let's Go</a>
