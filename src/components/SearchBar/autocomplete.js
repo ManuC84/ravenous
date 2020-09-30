@@ -8,6 +8,10 @@ export class Autocomplete extends Component {
         this.state = { address: '' };
     }
 
+    handleChange = address => {
+        this.setState({ address });
+    };
+
     render() {
         return (
             <div>
@@ -23,8 +27,8 @@ export class Autocomplete extends Component {
                                     placeholder: 'Search Places ...',
                                     className: 'location-search-input',
                                 })}
-
-                                onKeyUp={SearchBar.handleClick.bind(this)} onChange={SearchBar.handleLocationChange}
+                                // FUNCTIONS IMPORTED FROM SEARCHBAR.JS
+                                onKeyUp={SearchBar.handleClick} onChange={SearchBar.handleLocationChange}
                             />
                             <div className="autocomplete-dropdown-container">
                                 {loading && <div>Loading...</div>}

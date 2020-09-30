@@ -14,6 +14,7 @@ class SearchBar extends React.Component {
         this.handleTermsChange = this.handleTermsChange.bind(this);
         this.handleLocationChange = this.handleLocationChange.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+        this.handleClick = this.handleClick.bind(this);
         this.sortByOptions = {
             "Best Match": "best_match",
             "Highest Rated": "rating",
@@ -79,6 +80,7 @@ class SearchBar extends React.Component {
                 </div>
                 <div className="SearchBar-fields">
                     <input onKeyUp={this.handleClick.bind(this)} onChange={this.handleTermsChange} placeholder="Search Businesses" />
+                    {/* TRANSFER THIS PART TO INPUT ON AUTOCOMPLETE.JS */}
                     {/* {<input onKeyUp={this.handleClick.bind(this)} onChange={this.handleLocationChange} placeholder="Where?" />} */}
                     <Autocomplete />
                 </div>
